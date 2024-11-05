@@ -1,0 +1,155 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    width: 100%;
+    background: purple;
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 430px;
+    width: 100%;
+    background: white;
+    border-radius: 7px;
+    box-shadow: 0 5px 10px rgb(0, 0, 0, 0.3);
+    
+}
+
+.container .registrasi {
+    display: none;
+}
+
+#check:checked ~ .registrasi{
+    display: block;
+}
+
+#check:checked ~ .login{
+    display: block;
+}
+
+#check{
+    display: none;
+}
+
+.container form{
+    padding: 2rem;
+}
+
+header{
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    margin-top: 30px;
+    
+}
+
+form input{
+    height: 40px;
+    width: 100%;
+    padding: 0 15px;
+    font-size: 17px;
+    margin-bottom: 1.3rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+}
+
+form input:focus{
+    box-shadow: 0 1px 0 rgb(0, 0, 0, 0.2);
+}
+
+form a{
+    font-size: 16px;
+    color: purple;
+    text-decoration: none;
+}
+
+form a:hover{
+    text-decoration: underline;
+}
+
+.button{
+    color: #fff;
+    background: purple;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-top: 1.7rem;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.button:hover{
+    background: magenta;
+}
+
+.signup {
+    font-size: 17px;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.signup label{
+    color: purple;
+    cursor: pointer;
+}
+
+.signup label:hover{
+    text-decoration: underline;
+}
+
+span{
+    color: red;
+}
+
+/* The message box is shown when the user clicks on the password field */
+#message {
+    display:none;
+    background: #f1f1f1;
+    color: #000;
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+    width: 350px;
+    margin-left: 20px;
+    border-radius: 30px;
+  }
+  
+  #message p {
+    padding: 10px 35px;
+    font-size: 17px;
+    
+  }
+  
+  /* Add a green text color and a checkmark when the requirements are right */
+  .valid {
+    color: green;
+  }
+  
+  .valid:before {
+    position: relative;
+    left: -35px;
+    content: "✔";
+  }
+  
+  /* Add a red text color and an "x" when the requirements are wrong */
+  .invalid {
+    color: red;
+  }
+  
+  .invalid:before {
+    position: relative;
+    left: -35px;
+    content: "✖";
+  }

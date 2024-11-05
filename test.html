@@ -1,0 +1,22 @@
+<script>
+    document.querySelector('form').addEventListener('submit', function(e) {
+        var password = document.querySelector('input[name="password"]').value;
+
+        // Cek panjang password (harus lebih dari 15 karakter)
+        if (password.length <= 10) {
+            alert("Password harus lebih dari 15 karakter!");
+            e.preventDefault(); // Cegah form untuk dikirim
+            return;
+        }
+        // Cek apakah password mengandung setidaknya satu huruf kapital
+        if (!/[A-Z]/.test(password)) {
+            alert("Password harus mengandung setidaknya satu huruf kapital!");
+            e.preventDefault(); // Cegah form untuk dikirim
+        }
+
+        if (!/[1-9]/.test(password)) {
+            alert("Password harus mengandung setidaknya satu huruf kapital!");
+            e.preventDefault(); // Cegah form untuk dikirim
+        }
+    });
+</script>
